@@ -16,9 +16,21 @@ CORS(app)
 !! NOTE THIS WILL DROP ALL RECORDS AND START YOUR DB FROM SCRATCH
 !! NOTE THIS MUST BE UNCOMMENTED ON FIRST RUN
 '''
-# db_drop_and_create_all()
+db_drop_and_create_all()
 
 ## ROUTES
+
+@app.route('/drinks')
+@requires_auth('get:drinks-detail')
+def get_drinks(jwt):
+
+    print(jwt)
+    drinks = Drink.query.all()  
+    print(drinks)
+    return jsonify({
+        'success': 200,
+        'drinks': drinks
+    }), 200
 '''
 @TODO implement endpoint
     GET /drinks
