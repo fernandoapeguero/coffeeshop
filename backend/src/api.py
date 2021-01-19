@@ -12,34 +12,30 @@ app = Flask(__name__)
 setup_db(app)
 CORS(app)
 
-'''
-@TODO uncomment the following line to initialize the datbase
-!! NOTE THIS WILL DROP ALL RECORDS AND START YOUR DB FROM SCRATCH
-!! NOTE THIS MUST BE UNCOMMENTED ON FIRST RUN
-'''
-db_drop_and_create_all()
+#  only the line below uncomment on first run to create db and re comment for data not to get erase every time
+
+# db_drop_and_create_all()
 
 # ROUTES
-'''
-@TODO implement endpoint
-    GET /drinks
-        it should be a public endpoint
-        it should contain only the drink.short() data representation
-    returns status code 200 and json {"success": True, "drinks": drinks} where drinks is the list of drinks
-        or appropriate status code indicating reason for failure
-'''
 
 
 @app.route('/drinks')
 def get_drinks():
+    try:
 
-    drinks = Drink.query.all()
-    print(drinks)
-    return jsonify({
-        'success': 200,
-        'drinks': drinks
-    }), 200
+        drinks = Drink.query.all()
 
+        results = []
+
+        for drink in drinks:
+            results.append(drink.short())
+        
+        return jsonify({
+            'success': 200,
+            'drinks': results
+        }), 200
+    except:
+        abort(404)
 
 '''
 @TODO implement endpoint
@@ -55,14 +51,19 @@ def get_drinks():
 @requires_auth('get:drinks-detail')
 def get_drink_details(jwt):
 
-    print(jwt)
-    details = Drink.query.all()
-    print(details)
-    return jsonify({
-        'success': True,
-        'details': details
-    }), 200
+    try:
+        drinks = Drink.query.all()
 
+        results = []
+        for drink in drinks:
+            results.append(drink.long())
+
+        return jsonify({
+            'success': True,
+            'drinks': results
+        }), 200
+    except:
+        abort(404)
 
 '''
 @TODO implement endpoint
@@ -79,10 +80,20 @@ def get_drink_details(jwt):
 @requires_auth('post:drinks')
 def post_drinks(jwt):
 
-    return jsonify({
-        'success': 200
-    }), 200
+    try:
+        data = request.get_json()
 
+        title = data['title']
+        recipe = data['recipe']
+        drink = Drink(title=title , recipe=json.dumps(recipe))
+        drink.insert()
+        
+        return jsonify({
+            'success': 200,
+            'drink': drink.long()
+        }), 200
+    except:
+        abort(400)
 
 '''
 @TODO implement endpoint
@@ -99,18 +110,18 @@ def post_drinks(jwt):
 
 @app.route('/drinks/<int:drink_id>', methods=['PATCH'])
 @requires_auth('patch:drinks')
-def post_drink(drink_id, jwt):
+def post_drink(jwt, drink_id):
 
     try:
+        print(drink_id)
+        # drink = Drink.query.filter(Drink.id == drink_id).all()
 
-        drink = Drink.query.filter_by(id=drink_id)
-
-        if len(drink) == 0:
-            abort(404)
+        # if len(drink) == 0:
+        #     abort(404)
 
         return jsonify({
             'success': True,
-            'drinks': drink.long()
+            'drinks': []
         }), 200
     except:
         abort(404)
@@ -129,15 +140,15 @@ def post_drink(drink_id, jwt):
 
 @app.route('/drinks/<int:drink_id>' , methods=['DELETE'])
 @requires_auth('delete:drinks')
-def delete_drink(drink_id, jwt):
+def delete_drink(jwt, drink_id):
 
     try:
 
         drink = Drink.query.filter(Drink.id == drink_id).first()
     
-        if not drink:
-            abort(404)
-        print(jwt)
+        # if not drink:
+        #     abort(404)
+        
         return jsonify({
             'success': True,
             'delete': drink_id
@@ -175,7 +186,7 @@ def not_found(error):
 
     return jsonify({
         'success': False,
-        'error': error,
+        'error': 404,
         'message': 'resource not found'
     }), 404
 
