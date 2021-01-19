@@ -41,7 +41,7 @@ ionic serve
 ```
 
 >_tip_: Do not use **ionic serve**  in production. Instead, build Ionic into a build artifact for your desired platforms.
-[Checkout the Ionic docs to learn more](https://ionicframework.com/docs/cli/commands/build)
+[Checkout the Ionic docs to learn more](https://iionicframework.com/docs/cli/commands/build)
 
 ## Key Software Design Relevant to Our Coursework
 
