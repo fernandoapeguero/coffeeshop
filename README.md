@@ -13,7 +13,7 @@ The coffee shop web app is a web app for coffee recipe for the cofee lovers. rec
 
 Heroku Deploy Backend - Use a different repo for heroku deployment for the back end so i can use the backend in this repo for local development
 
-1.[`./backend/`](https://github.com/fernandoapeguero/coffeeshop)
+1.[`./backend/`](https://github.com/fernandoapeguero/coffeeshop-backend)
 # Coffee Shop Frontend
 
 ## Getting Setup
