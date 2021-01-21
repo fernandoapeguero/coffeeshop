@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e8ad44ee-7536-4901-913c-46e718d56d9f",
+		"_postman_id": "31babff3-93c7-4a6b-b10f-4a27b4e118dc",
 		"name": "udacity-fsnd-udaspicelatte",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "05cea6f9-9af0-4e60-9aad-4c8faf37ef4c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -33,9 +32,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks"
@@ -50,7 +52,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "65a195fa-a734-44b7-a7e0-c629b32d1fbb",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -64,9 +65,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks-detail",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks-detail",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks-detail"
@@ -81,7 +85,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5050a5b9-2e15-474e-9981-0e61ec8d2ff1",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -95,9 +98,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks"
@@ -112,7 +118,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ec1488aa-b4d7-468a-89f5-03484009e69c",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -126,9 +131,12 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks/1",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks/1",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks",
@@ -144,7 +152,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0aea66ad-0a6e-4533-b192-a8b0af746c78",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -158,9 +165,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks/1",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks/1",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks",
@@ -169,6 +179,29 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -181,7 +214,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "05cea6f9-9af0-4e60-9aad-4c8faf37ef4c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -200,9 +232,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks"
@@ -217,7 +252,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "65a195fa-a734-44b7-a7e0-c629b32d1fbb",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -231,9 +265,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks-detail",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks-detail",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks-detail"
@@ -248,7 +285,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5050a5b9-2e15-474e-9981-0e61ec8d2ff1",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -264,7 +300,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5YcFc4ZWRMbmR6aFFQOUZjTXNyOSJ9.eyJpc3MiOiJodHRwczovL2F1dGgwLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZmRkZTQ4MTMwOWUzMDA2OWM0MzRiNCIsImF1ZCI6ImNvZmZlZXNob3AiLCJpYXQiOjE2MTExNjg1NzQsImV4cCI6MTYxMTE3NTc3NCwiYXpwIjoidXltNUlWcjRnSE9SM0xtelRmZEtZYVE1aXB5bnlpeUkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpkcmlua3MtZGV0YWlsIl19.nlzkzJzEcEgTkiI2BID8Xko8vPtjbazwFmlZA2UVNzSz0UlHRLqUH-9JCRvhxRm2b5vM42wjnCrNoa367sDVMRJa-Tqf215he-Dk3FwZ0p7GsP9H1whAObyeuORMEub1h2Vqwd00UTSIBZStdWCrs-Kpq-PS4oKBzuLfKIUGmQRwPocNgRF6DP3hQNYvNT5hV4E6vlKNODJ0LtMnQv3Z4PmxUx4MVdYS9f-BFaAQ-HIwbAT8hkVfHaSv-opq4bc1t6Zhph1bmcTe4ZT1ESns57OknAgU5tFlAtyLqbBHMeW_juULGGENImN1A9eQUir2DsZ64pErTmewzpFQ-PF1qA",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
 									"type": "string"
 								}
 							]
@@ -272,9 +308,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks"
@@ -289,7 +328,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ec1488aa-b4d7-468a-89f5-03484009e69c",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -303,9 +341,12 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks/1",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks/1",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks",
@@ -321,7 +362,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0aea66ad-0a6e-4533-b192-a8b0af746c78",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
@@ -335,9 +375,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks/1",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks/1",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks",
@@ -353,7 +396,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5YcFc4ZWRMbmR6aFFQOUZjTXNyOSJ9.eyJpc3MiOiJodHRwczovL2F1dGgwLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZmRkZTQ4MTMwOWUzMDA2OWM0MzRiNCIsImF1ZCI6ImNvZmZlZXNob3AiLCJpYXQiOjE2MTExNjg1NzQsImV4cCI6MTYxMTE3NTc3NCwiYXpwIjoidXltNUlWcjRnSE9SM0xtelRmZEtZYVE1aXB5bnlpeUkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpkcmlua3MtZGV0YWlsIl19.nlzkzJzEcEgTkiI2BID8Xko8vPtjbazwFmlZA2UVNzSz0UlHRLqUH-9JCRvhxRm2b5vM42wjnCrNoa367sDVMRJa-Tqf215he-Dk3FwZ0p7GsP9H1whAObyeuORMEub1h2Vqwd00UTSIBZStdWCrs-Kpq-PS4oKBzuLfKIUGmQRwPocNgRF6DP3hQNYvNT5hV4E6vlKNODJ0LtMnQv3Z4PmxUx4MVdYS9f-BFaAQ-HIwbAT8hkVfHaSv-opq4bc1t6Zhph1bmcTe4ZT1ESns57OknAgU5tFlAtyLqbBHMeW_juULGGENImN1A9eQUir2DsZ64pErTmewzpFQ-PF1qA",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5YcFc4ZWRMbmR6aFFQOUZjTXNyOSJ9.eyJpc3MiOiJodHRwczovL2F1dGgwLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZmRkZTQ4MTMwOWUzMDA2OWM0MzRiNCIsImF1ZCI6ImNvZmZlZXNob3AiLCJpYXQiOjE2MTEyMDYzMDksImV4cCI6MTYxMTIxMzUwOSwiYXpwIjoidXltNUlWcjRnSE9SM0xtelRmZEtZYVE1aXB5bnlpeUkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpkcmlua3MtZGV0YWlsIl19.ZG11-eP78_MqoNj0_HsgS_BnI7Re_-6IAgRfv5utmP2GamZHHxA0DbwlkTumA9SinT7mgLGiZLbGeQkSNDTY8uVo4IpMI378WN7ygxlf2IpZSFLErK8qEeJ5iuoA_zPpLX17aQzUMxd5Nyn5zUHT2PoBSxV1b0HPIRPxSbAEzkLRWA7Y5qmlfiHfciUCNK-eaSGQyWG-iOeCAJnsrztyM17nzM-G3byfUMgXnRpmkAPbrMBcfQADxDKbSQjYRADLxJkCW_nTkXYhQp57HYeFtY37io4GrgEub1d1YOqtPrtMg2_NoyynRRZO9mflh5C6cE0jvdSH4qXxHWoSNLUkCA",
 						"type": "string"
 					}
 				]
@@ -362,7 +405,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f985b22c-34c4-4cfe-8308-f6fb98d799ac",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -372,7 +414,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "596425ac-59b4-4488-9f07-4c748e1ad082",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -390,7 +431,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "05cea6f9-9af0-4e60-9aad-4c8faf37ef4c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -409,9 +449,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks"
@@ -426,7 +469,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "65a195fa-a734-44b7-a7e0-c629b32d1fbb",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -445,9 +487,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks-detail",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks-detail",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks-detail"
@@ -462,7 +507,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5050a5b9-2e15-474e-9981-0e61ec8d2ff1",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -484,12 +528,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Water3\",\n    \"recipe\": {\n        \"name\": \"Water\",\n        \"color\": \"blue\",\n        \"parts\": 1\n    }\n}"
+							"raw": "{\n    \"title\": \"Milk Rice\",\n    \"recipe\": {\n        \"name\": \"Milk Rice\",\n        \"color\": \"white\",\n        \"parts\": 1\n    }\n}"
 						},
 						"url": {
-							"raw": "{{host}}/drinks",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks"
@@ -504,7 +551,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ec1488aa-b4d7-468a-89f5-03484009e69c",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -534,9 +580,12 @@
 							"raw": "{\n    \"title\": \"Water5\"\n}"
 						},
 						"url": {
-							"raw": "{{host}}/drinks/1",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks/1",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks",
@@ -552,7 +601,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0aea66ad-0a6e-4533-b192-a8b0af746c78",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -566,9 +614,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/drinks/1",
+							"raw": "https://coffeeshop-app-backend.herokuapp.com/drinks/1",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"coffeeshop-app-backend",
+								"herokuapp",
+								"com"
 							],
 							"path": [
 								"drinks",
@@ -584,7 +635,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5YcFc4ZWRMbmR6aFFQOUZjTXNyOSJ9.eyJpc3MiOiJodHRwczovL2F1dGgwLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwMDQ4NDMyYmY1NzUwMDA3MDM0OWI0YiIsImF1ZCI6ImNvZmZlZXNob3AiLCJpYXQiOjE2MTExNjg4NTEsImV4cCI6MTYxMTE3NjA1MSwiYXpwIjoidXltNUlWcjRnSE9SM0xtelRmZEtZYVE1aXB5bnlpeUkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.mg_7R5YWdu24L2XdKu3nHjeezWLPYDyl1gF7PGgT-8LTNVOasgHrrNzsi2qP3MWbxUtYlLbXk8CL61RYW28XjbkTNlGYVK5HNY6f20V3bHjVfB1VRrV6pCvhyMPUYikUuK1b8ERu_ipDyncrvx2Q05u0dCZQ0dOf1O0sWBzW3c-2LkVwWFx9JykNvxGfkZdAYH0UcJNXh2rdT4Rz89mvbKCjGmdj7avu6OYHHCX8s_Rbng9DqMCIDQuLb71nSvlO4qdUiYU9cU73mANQsAQPWQa0mxvyH0WxlwGSrllkKr7cSsu-fL6mQluxNYSI3KHSZmCANKXr_2E3u5kZOtjlTg",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5YcFc4ZWRMbmR6aFFQOUZjTXNyOSJ9.eyJpc3MiOiJodHRwczovL2F1dGgwLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwMDQ4NDMyYmY1NzUwMDA3MDM0OWI0YiIsImF1ZCI6ImNvZmZlZXNob3AiLCJpYXQiOjE2MTEyMDYyMzAsImV4cCI6MTYxMTIxMzQzMCwiYXpwIjoidXltNUlWcjRnSE9SM0xtelRmZEtZYVE1aXB5bnlpeUkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.6syKNY8hu3mxmKnaKAga8LDcsYLkxMOwKd97FQ5JYVRZvzz9KBrsiryL4-pEVXb76hc3Dj9CRK_OHYbyTbt7gvslikwPQ_epLW-4ny--sddIgYQ1vn0zTOqu7Wrszcc2eXuX8lW18YIcp-zd-eAOpWOX33gHJNKb3j2o_cKwW0Q3_syxrw33-A4vEBaGPcAP7hj2LKE6tZPghEGvIjj4rYlefuTe4SYY9eOw_Ii-3WOF6cSGNi7xweddKGmHf-t9QKmIqYaRRPq5jJ6VrtgK7Y05XRs6jNxJdyrk3HoeTQoIoeGTEIZ4ra1SRvFbZWii4b0fY3DBk9bsJlZwzfznaw",
 						"type": "string"
 					}
 				]
@@ -593,7 +644,6 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "113ee6fe-418d-4bf4-a641-444b5816e46b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -603,7 +653,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5704da6d-dc7e-42b9-8214-aa7ecf075bca",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -613,11 +662,20 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5YcFc4ZWRMbmR6aFFQOUZjTXNyOSJ9.eyJpc3MiOiJodHRwczovL2F1dGgwLWZzbmQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZmRkZTQ4MTMwOWUzMDA2OWM0MzRiNCIsImF1ZCI6ImNvZmZlZXNob3AiLCJpYXQiOjE2MTA4MTg0NjAsImV4cCI6MTYxMDgyNTY2MCwiYXpwIjoidXltNUlWcjRnSE9SM0xtelRmZEtZYVE1aXB5bnlpeUkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpkcmlua3MtZGV0YWlsIl19.OseRQ0BR-IasXFhlGi8eLfaC8YpzPACNeNtYYkLh4pVlFKCr4mCbVxPOrjqb0qbyrI3dwU1rqaga2ePHGL5OOMv5mgtb9liavdXu6dMY8927xNxXIU0M2Do-VnAzT-Lm_0YEslsSJlIt3CJo0-FwR28PtxtgqSKkmeNBvStvQo1YX8zAnwdQTNjGxVIhDkiUdBS4JtE1eV15kE202LNncAhaalYi6ND27MOoHHNkuxxrTTa-RZF8tM5Lkts3mhwgMPezbuy5YPlZG3GWPBf2caVmQvqceXYDZGhStOxn8QxNVKwW2PCxhYHTPp-ZjinDWZAS3-j7t2FBy8EPHIVTBA",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "fc871e59-eaa4-46e8-975b-87b750ad1804",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -627,7 +685,6 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e5766f23-c7f1-472b-ae34-825a91147815",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -637,10 +694,8 @@
 	],
 	"variable": [
 		{
-			"id": "7da0fa13-ecd9-4d7d-8e38-fde2c81cfdaf",
 			"key": "host",
-			"value": "localhost:5000",
-			"type": "string"
+			"value": "localhost:5000"
 		}
 	]
 }
