@@ -26,9 +26,9 @@ def get_drinks():
         drinks = Drink.query.all()
 
         results = []
-
-        for drink in drinks:
-            results.append(drink.short())
+        if drinks:
+            for drink in drinks:
+                results.append(drink.short())
 
         return jsonify({
             'success': 200,
@@ -83,21 +83,36 @@ def post_drink(jwt, drink_id):
 
     try:
         data = request.get_json()
-        print(drink_id)
-
-        recipe = data['recipe']
-
+        
         drink = Drink.query.filter(Drink.id == drink_id).first()
 
         if not drink:
             abort(404)
 
-        drink.recipe = json.dumps(recipe)
+        title = ''
+
+        if 'title' in data:
+            title = data['title']
+        else:
+            title = drink.title
+
+        recipe = ''
+        if 'recipe' in data:
+            recipe = data['recipe']
+        else:
+            recipe = drink.recipe
+
+        drink.title = title
+        drink.recipe = str(recipe)
         drink.update()
+
+        result = []
+
+        result.append(drink.long())
 
         return jsonify({
             'success': True,
-            'drinks': drink.long()
+            'drinks': result
         }), 200
     except:
         abort(404)
